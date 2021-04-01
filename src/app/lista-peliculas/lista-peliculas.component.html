@@ -1,0 +1,9 @@
+<h1>Club de fans de Studio Ghibli!!</h1>
+<p>Introduce un limite de datos:<input type="text" [(ngModel)] = "limitePelis"/></p>
+<!-- Aqui abajo poner un ngIf para que aparezca cuando limitePelis > 0 -->
+<p>El pavo ha introducido {{ limitePelis }} peliculas lmaooo</p>
+<input type="button" value="Obtener pelis" (click)="obtenerPelis()"/>
+<ul *ngFor="let elemento of pelisJSON">
+	<li>{{ elemento.title }} que es del año {{elemento.release_date}}</li>
+</ul>
+<input type="button" value="Ir ejemplo" (click)="irEjemplo()"/>
